@@ -1,0 +1,45 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="action_vehicle_menu">
+            <field name="name">factura.form.view</field>
+            <field name="model">carplus.factura</field>
+            <field name="arch" type="xml">
+                <form string="Form Factura">
+                    <sheet>
+                        <group>
+                            <field name="client_id"/>
+                            <field name="vehicle_id"/>
+                            <field name="preu"/>
+                            <field name="data_factura"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree view -->
+        <record id="factura_tree_view" model="ir.ui.view">
+            <field name="name">factura.tree.view</field>
+            <field name="model">carplus.factura</field>
+            <field name="arch" type="xml">
+                <tree string="Tree Factura">
+                    <field name="client_id"/>
+                    <field name="vehicle_id"/>
+                    <field name="preu"/>
+                    <field name="data_factura"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_factura" model="ir.actions.act_window">
+            <field name="name">action.factura</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">carplus.factura</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Menus -->
+        <menuitem name="Factura" id="action_factura_menu" sequence="1" parent="car_plus.carplus_menu_category"
+                  action="action_factura"/>
+    </data>
+</odoo>

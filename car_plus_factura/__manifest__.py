@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "CarPlus_factura",
+    'name': "CarPlus_vehicle",
 
     'summary': """
         Mòdul per a la gestió dels lloguers/renting de vehicles.""",
@@ -19,12 +19,12 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['car_plus'],
+    'depends': ['car_plus_vehicle'],
 
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        'views/carPlus_cotxe_view.xml',
+        'views/carPlus_factura_view.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

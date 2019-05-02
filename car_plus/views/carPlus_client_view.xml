@@ -7,7 +7,7 @@
                 <form string="Form Client">
                     <sheet>
                         <group>
-                            <field name="nom"/>
+                            <field name="name"/>
                             <field name="dni"/>
                             <field name="dataNaixament"/>
                             <field name="targetaCredit"/>
@@ -23,7 +23,7 @@
             <field name="model">carplus.client</field>
             <field name="arch" type="xml">
                 <tree string="Tree Client">
-                    <field name="nom"/>
+                    <field name="name"/>
                     <field name="dni"/>
                 </tree>
             </field>
@@ -41,7 +41,6 @@
         <menuitem name="Menu" id="carplus_menu_category" sequence="1" parent="carplus_menu_root"/>
         <menuitem name="Client" id="action_client_menu" sequence="1" parent="carplus_menu_category"
                   action="action_client"/>
-        <!--        <menuitem name="Lloguer/Renting" id="action_lloguer_renting_menu" sequence="1" parent="carplus_menu_category"-->
-        <!--                  action="action_lloguer_renting"/>-->
+        <menuitem name="Lloguer/Renting" id="action_lloguer_renting_menu" sequence="1" parent="carplus_menu_category"/>
     </data>
 </odoo>

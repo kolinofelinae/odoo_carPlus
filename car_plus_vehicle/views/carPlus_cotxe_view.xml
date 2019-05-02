@@ -10,7 +10,7 @@
                             <field name="marca"/>
                             <field name="model"/>
                             <field name="color"/>
-                            <field name="matricula"/>
+                            <field name="name"/>
                             <field name="data_compra"/>
                             <field name="places"/>
                             <field name="tipus"/>
