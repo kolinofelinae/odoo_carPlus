@@ -7,7 +7,7 @@
                 <form string="Form Cotxe">
                     <sheet>
                         <group>
-                            <field name="marca"/>
+                            <field name="marca_id"/>
                             <field name="model"/>
                             <field name="color"/>
                             <field name="name"/>
@@ -31,7 +31,7 @@
             <field name="model">carplus.cotxe</field>
             <field name="arch" type="xml">
                 <tree string="Tree Cotxe">
-                    <field name="marca"/>
+                    <field name="marca_id"/>
                     <field name="model"/>
                     <field name="color"/>
                 </tree>

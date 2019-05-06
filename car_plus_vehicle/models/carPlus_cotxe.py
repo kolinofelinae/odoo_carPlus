@@ -6,7 +6,7 @@ from odoo import models, fields, api
 class Cotxe(models.Model):
     _name = 'carplus.cotxe'
 
-    marca = fields.Char(string="Marca")
+    marca_id = fields.Many2one("carplus.cotxemarca", string="Marca")
     model = fields.Char(string="Model")
     color = fields.Char(string="Color")
     name = fields.Char(string="Matricula")
