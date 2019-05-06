@@ -13,7 +13,7 @@
                             <field name="name"/>
                             <field name="data_compra"/>
                             <field name="places"/>
-                            <field name="tipus"/>
+                            <field name="tipus_id"/>
                             <field name="combustible"/>
                         </group>
                         <group>

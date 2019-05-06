@@ -1,0 +1,47 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="action_vehicle_menu">
+            <field name="name">report.form.view</field>
+            <field name="model">carplus.report</field>
+            <field name="arch" type="xml">
+                <form string="Form Reportar Accident">
+                    <sheet>
+                        <group>
+                            <field name="client_id"/>
+                            <field name="vehicle_id"/>
+                            <field name="nom_segona_part"/>
+                            <field name="dni_segona_part"/>
+                            <field name="matricula_segona_part"/>
+                            <field name="telefon_segona_part"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree view -->
+        <record id="report_tree_view" model="ir.ui.view">
+            <field name="name">report.tree.view</field>
+            <field name="model">carplus.report</field>
+            <field name="arch" type="xml">
+                <tree string="Tree Reportar Accident">
+                    <field name="client_id"/>
+                    <field name="vehicle_id"/>
+                    <field name="nom_segona_part"/>
+                    <field name="telefon_segona_part"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_report" model="ir.actions.act_window">
+            <field name="name">action.report</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">carplus.report</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Menus -->
+        <menuitem name="Report d'accident" id="action_report_menu" sequence="1" parent="car_plus.carplus_menu_category"
+                  action="action_report"/>
+    </data>
+</odoo>

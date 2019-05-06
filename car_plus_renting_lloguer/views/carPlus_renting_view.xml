@@ -1,0 +1,48 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="action_vehicle_menu">
+            <field name="name">rentinglloguer.form.view</field>
+            <field name="model">carplus.rentinglloguer</field>
+            <field name="arch" type="xml">
+                <form string="Form Renting/Lloguer">
+                    <sheet>
+                        <group>
+                            <field name="client_id"/>
+                            <field name="vehicle_id"/>
+                            <field name="is_renting"/>
+                            <field name="data_inici"/>
+                            <field name="data_final"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree view -->
+        <record id="rentinglloguer_tree_view" model="ir.ui.view">
+            <field name="name">rentinglloguer.tree.view</field>
+            <field name="model">carplus.rentinglloguer</field>
+            <field name="arch" type="xml">
+                <tree string="Tree Renting/Lloguer" decoration-danger="is_renting == True">
+                    <field name="client_id"/>
+                    <field name="vehicle_id"/>
+                    <field name="data_inici"/>
+                    <field name="data_final"/>
+                    <field name="is_renting" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_renting_lloguer" model="ir.actions.act_window">
+            <field name="name">action.rentinglloguer</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">carplus.rentinglloguer</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Menus -->
+        <menuitem name="Renting/Lloguer" id="action_renting_lloguer_menu" sequence="1"
+                  parent="car_plus.carplus_menu_category"
+                  action="action_renting_lloguer"/>
+    </data>
+</odoo>

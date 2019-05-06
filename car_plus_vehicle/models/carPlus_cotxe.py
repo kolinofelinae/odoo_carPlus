@@ -12,7 +12,7 @@ class Cotxe(models.Model):
     name = fields.Char(string="Matricula")
     data_compra = fields.Date(string="Data de compra")
     places = fields.Integer(string="Número de plaçes")
-    tipus = fields.Char(string="Tipus")
+    tipus_id = fields.Many2one("carplus.cotxetipus", string="Tipus")
     combustible = fields.Char(string="Combustible")
     preu_lloguer = fields.Float(string="Preu lloguer")
     preu_renting = fields.Float(string="Preu renting")
