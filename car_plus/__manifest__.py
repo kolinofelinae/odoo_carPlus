@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "CarPlus",
+    'name': "CarPlus Client",
 
     'summary': """
         Mòdul per a la gestió dels lloguers/renting de vehicles.""",

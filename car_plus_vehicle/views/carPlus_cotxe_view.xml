@@ -14,7 +14,7 @@
                             <field name="data_compra"/>
                             <field name="places"/>
                             <field name="tipus_id"/>
-                            <field name="combustible"/>
+                            <field name="combustible_id"/>
                         </group>
                         <group>
                             <field name="preu_lloguer"/>

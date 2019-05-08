@@ -1,6 +1,7 @@
 # -- coding: utf-8 --
 
 from odoo import models, fields, api, exceptions
+from datetime import datetime, timedelta, date
 
 
 class Client(models.Model):
@@ -13,11 +14,11 @@ class Client(models.Model):
 
     @api.onchange('dataNaixament')
     def onchange_date(self):
-        if self.dataNaixament and esMajorDedat(self):
-            raise exceptions.UserError(
-                "Ho sentim, només podem oferir serveis a majors d'edat!"
-            )
-
-    def esMajorDedat(born):
-        today = date.today()
-        return today.year - born.year - ((today.month, today.day) < (born.month, born.day))
+        if self.dataNaixament:
+            today = date.today()
+            born = datetime.strptime(self.dataNaixament, '%Y-%m-%d')
+            age = today.year - born.year - ((today.month, today.day) < (born.month, born.day))
+            if age < 18:
+                raise exceptions.UserError(
+                    "Ho sentim, només podem oferir serveis a majors d'edat!"
+                )

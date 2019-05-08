@@ -25,6 +25,7 @@
     'data': [
         # 'security/ir.model.access.csv',
         'views/carPlus_cotxe_view.xml',
+        'data/data.xml'
     ],
     # only loaded in demonstration mode
     'demo': [
