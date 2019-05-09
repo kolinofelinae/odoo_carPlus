@@ -25,6 +25,7 @@
     'data': [
         # 'security/ir.model.access.csv',
         'views/carPlus_client_view.xml',
+        'data/defaultdata.xml'
     ],
     # only loaded in demonstration mode
     'demo': [

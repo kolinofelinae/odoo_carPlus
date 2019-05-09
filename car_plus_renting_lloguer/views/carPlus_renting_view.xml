@@ -7,6 +7,7 @@
                 <form string="Form Renting/Lloguer">
                     <sheet>
                         <group>
+                            <field name="name"/>
                             <field name="client_id"/>
                             <field name="vehicle_id"/>
                             <field name="is_renting"/>

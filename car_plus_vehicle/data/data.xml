@@ -20,6 +20,9 @@
         <record id="6" model="carplus.cotxecombustible">
             <field name="name">Gas</field>
         </record>
+        <record id="12" model="carplus.cotxecombustible">
+            <field name="name">Sense</field>
+        </record>
 
         <record id="7" model="carplus.cotxemarca">
             <field name="name">VW</field>

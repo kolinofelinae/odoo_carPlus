@@ -7,10 +7,10 @@ from datetime import datetime, timedelta, date
 class Client(models.Model):
     _name = 'carplus.client'
 
-    name = fields.Char(string="Nom")
-    dni = fields.Char(string="DNI")
-    dataNaixament = fields.Date(string="Data de naixement")
-    targetaCredit = fields.Char(string="Targeta de crèdit")
+    name = fields.Char(string="Nom", required=True)
+    dni = fields.Char(string="DNI", required=True)
+    dataNaixament = fields.Date(string="Data de naixement", required=True)
+    targetaCredit = fields.Char(string="Targeta de crèdit", required=True)
 
     @api.onchange('dataNaixament')
     def onchange_date(self):

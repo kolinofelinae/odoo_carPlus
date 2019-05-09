@@ -19,7 +19,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['car_plus_vehicle'],
+    'depends': ['car_plus_renting_lloguer'],
 
     # always loaded
     'data': [
