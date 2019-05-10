@@ -9,8 +9,8 @@ class Factura(models.Model):
     client_id = fields.Many2one("carplus.client", string="Client", required=True)
     vehicle_id = fields.Many2one("carplus.cotxe", string="Vehicle", required=True)
     renting_id = fields.Many2one("carplus.rentinglloguer", string="Contracte", required=True)
-    preu = fields.Float(string="Preu")
     data_factura = fields.Date(string="Data de factura", required=True)
+    preu = fields.Float(string="Preu")
 
     # @api.onchange('renting_id')
     # def onchange_date(self):
