@@ -7,10 +7,10 @@ from datetime import datetime, timedelta, date
 class RentingLloguer(models.Model):
     _name = 'carplus.rentinglloguer'
 
-    name = fields.Char(string="Identificacio factura", required=True)
+    name = fields.Char(string="Identificacio contracte", required=True)
     client_id = fields.Many2one("carplus.client", string="Client", required=True)
     vehicle_id = fields.Many2one("carplus.cotxe", string="Vehicle", required=True)
-    is_renting = fields.Boolean(string="Marcar aquesta casella si es renting", default=0)
+    is_renting = fields.Boolean(string="Marcar aquesta casella si es renting", default=False)
     data_inici = fields.Date(string="Data inici renting/lloguer", required=True)
     data_final = fields.Date(string="Data final renting/lloguer", required=True)
 
@@ -26,7 +26,7 @@ class RentingLloguer(models.Model):
                 "No es pot seleccionar una data de finalització abans de la d'inici"
             )
 
-        if (not self.is_renting) and self.data_inici and self.data_final:
+        if self.is_renting == False and self.data_inici and self.data_final:
             initial_date = datetime.strptime(self.data_inici, '%Y-%m-%d')
             final_date = datetime.strptime(self.data_final, '%Y-%m-%d')
             if abs(final_date - initial_date).days > 30:
@@ -34,7 +34,7 @@ class RentingLloguer(models.Model):
                     "No es pot llogar un vehicle per més de 30 dies"
                 )
         else:
-            if self.is_renting and self.data_inici and self.data_final:
+            if self.is_renting == True and self.data_inici and self.data_final:
                 initial_date = datetime.strptime(self.data_inici, '%Y-%m-%d')
                 final_date = datetime.strptime(self.data_final, '%Y-%m-%d')
                 if abs(final_date - initial_date).days < 30:

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "CarPlus_factura",
+    'name': "CarPlus Vehicle",
 
     'summary': """
         Mòdul per a la gestió dels lloguers/renting de vehicles.""",
